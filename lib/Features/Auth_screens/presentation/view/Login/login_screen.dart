@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Register/register_screen.dart';
 import '../widgets/custom_bottom_widget.dart';
 import '../widgets/custom_text_field.dart';
 import '../widgets/form_label.dart';
@@ -70,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                     const FormLabel(label: " Don't have an account ? "),
                     InkWell(
                       onTap: (){
-                        // Navigator.pushNamed(context, RegisterScreen.routeName);
+                        Navigator.pushNamed(context, RegisterScreen.routeName);
                       },
                       child: const Text("Create an account", style: TextStyle(
                         color: Colors.white, fontSize: 18,

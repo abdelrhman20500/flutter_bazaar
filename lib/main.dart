@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bazaar/Features/Auth_screens/presentation/view/Login/login_screen.dart';
+import 'package:flutter_bazaar/Features/Auth_screens/presentation/view/Register/register_screen.dart';
 import 'package:flutter_bazaar/Features/Splash_screen/presentation/view/splash_screen.dart';
 
 void main() {
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName:(_)=>const SplashScreen(),
         LoginScreen.routeName:(_)=> LoginScreen(),
+        RegisterScreen.routeName:(_)=>RegisterScreen()
       },
-      initialRoute: LoginScreen.routeName,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }
