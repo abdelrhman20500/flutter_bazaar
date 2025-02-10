@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height =MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: const Color(0xff004182),
       body: SingleChildScrollView(
@@ -29,13 +30,13 @@ class LoginScreen extends StatelessWidget {
                 const Text("Welcome back to route", style: TextStyle(
                     fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white
                 ),),
-                const SizedBox(height: 8),
+                SizedBox(height: height*0.01),
                 const Text("please sign in with your email", style: TextStyle(
                     fontSize: 20, color: Colors.white
                 ),),
-                const SizedBox(height: 40),
-                const FormLabel(label: "Email Address"),
-                const SizedBox(height: 20),
+                SizedBox(height: height*0.05),
+                const FormLabel(label: "Email Address :"),
+                SizedBox(height: height*0.024),
                 CustomTextFiled(
                     hintText: "please enter your email",
                     controller: emailController,
@@ -46,9 +47,9 @@ class LoginScreen extends StatelessWidget {
                     type: TextInputType.emailAddress,
                     isPassword: false
                 ),
-                const SizedBox(height: 32),
-                const FormLabel(label: "password"),
-                const SizedBox(height: 20),
+                SizedBox(height: height*0.04),
+                const FormLabel(label: "password :"),
+                SizedBox(height: height*0.024),
                 CustomTextFiled(
                     hintText: "please enter your password",
                     controller: passwordController,
@@ -58,11 +59,11 @@ class LoginScreen extends StatelessWidget {
                     type:TextInputType.visiblePassword,
                     isPassword: false
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: height*0.03),
                 CustomButtonWidget(
                     onPressed: (){},
                     title: "Login"),
-                const SizedBox(height: 16),
+                SizedBox(height: height*0.02),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
